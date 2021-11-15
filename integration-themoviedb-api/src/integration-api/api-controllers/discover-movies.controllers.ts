@@ -7,7 +7,7 @@ export default class DicoverMoviesCotroller {
 
     public constructor(){}
 
-    public async index(req: Request, res: Response): Promise<Response> {
+    public async find(req: Request, res: Response): Promise<Response> {
 
         const params = req.body;
 

@@ -14,6 +14,6 @@ Routes.get('/', (req: Request, res: Response) => {
     return res.sendFile(path.resolve(__dirname, '..', '..', 'index.html')); 
 });
 
-Routes.get('/dicover-movies', dicoverMoviesCotroller.index);
+Routes.get('/dicover-movies', dicoverMoviesCotroller.find);
 
 export default Routes;

@@ -22,7 +22,7 @@
     8. yarn start
 
 
-    Pronto agora é para a api estar rodando e para ver se está tudo ok faça um request do tipo get com Insomnia ou Postman e requesite na url http://localhost:3333/dicover-movies com um body do tipo json com o seguinte:
+    Pronto agora é para a api estar rodando e para ver se está tudo ok faça um request do tipo <br/> get com Insomnia ou Postman e requesite na url http://localhost:3333/dicover-movies com um body do tipo json com o seguinte:
 </p>
     <pre>
         {

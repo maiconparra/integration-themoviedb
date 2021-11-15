@@ -1,9 +1,9 @@
-import { DataTypes } from "sequelize/types";
+import { DataTypes } from "sequelize";
 
 //Model
 import MoviesModel from "../../integration-business/business-models/movies.model";
 
-export default class Moveis extends MoviesModel {
+export default class Movies extends MoviesModel {
 
     static onLoadMovies(sequelize: any): void {
         super.init({
@@ -16,7 +16,7 @@ export default class Moveis extends MoviesModel {
     }
 
     static associate(model: any): void {
-        this.belongsTo(model.User);
+        this.belongsTo(model.User, { foreignKey: "UserId", as: "User" });
     }
 
 }

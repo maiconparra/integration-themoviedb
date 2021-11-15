@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize/types";
+import { DataTypes } from "sequelize";
 
 //Model
 import ContactModel from "../../integration-business/business-models/contact.model";
@@ -16,7 +16,7 @@ export default class Contact extends ContactModel {
     }
 
     static associate(model: any): void {
-        this.belongsTo(model.User);
+        this.belongsTo(model.User, { foreignKey: "UserId", as: "User" });
     }
 
 }

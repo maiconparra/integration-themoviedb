@@ -1,7 +1,10 @@
-FROM node:14.15.0
+FROM node:latest
 ENV NODE_ENV=development
 
-WORKDIR /var/www/integration-themoviedb-api
+ARG user
+ARG uid
+
+WORKDIR /var/www/integration-themoviedb-api/
 
 COPY ["package.json", "yarn-lock*", "./"]
 
@@ -12,6 +15,8 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get install -y yarn
 
 RUN yarn install
+
+RUN useradd -G www-data,root -u $uid -d /home/$user $user
 
 COPY . .
 

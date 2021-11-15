@@ -18,6 +18,7 @@ export default class User extends UserModel {
     }
 
     static associate(model: any): void {
+
         this.hasMany(model.Contact, { foreignKey: "UserId", as: "Contacts" });
         this.hasMany(model.Movies, { foreignKey: "UserId", as: "Movies"});
     }

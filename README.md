@@ -13,7 +13,7 @@
     Para criar o imagem e subir o conteiner siga os seguintes passos:
 
     1. Instale o Docker e Docker Compose.
-    2. docker-compose up -d 
+    2. docker-compose up -d //Na raiz do projeto
     3. cd integration-themoviedb-api
     4. Se não estiver instalado instale o NodeJS e Yarn.
     5. yarn install
@@ -71,7 +71,7 @@
 </pre>
 
 <p>
-    Agora para atualizar as informações de um usuário é na rota: http://localhost:3333/user-update
+    Agora para atualizar as informações de um usuário é um post na rota: http://localhost:3333/user-update
     
     Novamente com um json no body, só que desta vez com o id do usuário.
 </p>

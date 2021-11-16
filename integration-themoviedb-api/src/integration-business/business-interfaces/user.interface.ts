@@ -5,5 +5,7 @@ export default interface UserInterface {
     FirstName: String,
     Surname: String,
     Email: String,
-    Nickname: String
+    Nickname: String,
+    createdAt?: Date,
+    updatedAt?: Date
 }

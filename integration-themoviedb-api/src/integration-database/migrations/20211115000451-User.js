@@ -1,5 +1,6 @@
 'use strict';
 
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable('User', {
@@ -23,6 +24,14 @@ module.exports = {
       Nickname: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: true,
+        type: Sequelize.DATE
       }
     }); 
   },

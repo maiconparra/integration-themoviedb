@@ -33,5 +33,6 @@
     </pre>
 <p>
     Deverá ser carregado uma lista de filmes lançados na linguagem Brasileira.
+    Foi deixado na raiz do repositório um arquivo de importação do Insomnia,para facilitar os testes.
 </p>
 

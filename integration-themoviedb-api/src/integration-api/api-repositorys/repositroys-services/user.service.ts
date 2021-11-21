@@ -16,15 +16,8 @@ export default class UserService extends UserRepository {
         super();
     }
 
-    public getAllUsers(): UserDto {
-        User.findAll()
-            .then(result => {
-               return result;
-            }).catch(err => {
-                return err;
-            });
-
-        return;
+    public getAllUsers(): any {
+        return User.findAll();
     }
 
     public getUserByEmail(Email: String): UserDto {

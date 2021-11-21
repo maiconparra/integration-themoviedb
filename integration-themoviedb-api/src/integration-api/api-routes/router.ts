@@ -22,5 +22,6 @@ Routes.get('/dicover-movies', dicoverMoviesCotroller.find);
 //User
 Routes.post('/user-create', userController.createUser);
 Routes.post('/user-update', userController.updateUser);
+Routes.get('/user-all', userController.getUsers);
 
 export default Routes;

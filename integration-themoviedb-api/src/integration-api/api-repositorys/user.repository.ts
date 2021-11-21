@@ -8,7 +8,7 @@ export default abstract class UserRepository {
     public constructor() {}
 
 
-    public abstract getAllUsers(): UserDto;
+    public abstract getAllUsers(): any;
 
     public abstract getUserById(id: String): UserDto;
 

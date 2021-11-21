@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { removeTicks } from 'sequelize/types/lib/utils';
 import { v4 } from 'uuid';
 
 //Services
@@ -19,6 +20,13 @@ export default class UserController {
         }else {
             return res.json(await userService.createUser({ id: v4(), FirstName, Surname, Email, Nickname }));
         }
+    }
+
+    public async getUsers(req: Request, res: Response): Promise<Response> {
+        const userService = new UserService; 
+
+        return res.json(await userService.getAllUsers());
+
     }
 
     public async updateUser(req: Request, res: Response): Promise<Response> {
